@@ -1,0 +1,13 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connexion TikTok · LiaExplique Studio</title>
+<style>body{max-width:600px;margin:0 auto;padding:40px 18px;font-family:system-ui,sans-serif;color:#0B1A3A}</style></head><body>
+<h1>Connexion TikTok</h1>
+<p id="msg">Retour vers le studio sur ton ordinateur…</p>
+<script>
+// TikTok renvoie ici (adresse https obligatoire) ; on transmet le code au studio local, sur l'ordinateur de la propriétaire.
+const q = location.search;
+if (q.includes('code=') || q.includes('error=')) location.replace('http://localhost:8765/tiktok/retour' + q);
+else document.getElementById('msg').textContent = 'Aucun code reçu de TikTok.';
+</script>
+<noscript>Active JavaScript pour terminer la connexion.</noscript>
+</body></html>
